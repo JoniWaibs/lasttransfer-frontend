@@ -1,7 +1,18 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import * as React from 'react';
+import { AppProps } from 'next/app';
+import AppContext from '../context/auth/authState';
+import Layout from '../components/Layout';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
-export default MyApp
+
+
+const App: React.FunctionComponent<AppProps> = ({Component, pageProps}) => {
+  return(
+    <AppContext>
+      <Layout>
+        <Component {...pageProps}/>
+      </Layout>
+    </AppContext>
+  ) ;
+};
+
+export default App;

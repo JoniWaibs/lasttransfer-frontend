@@ -1,0 +1,12 @@
+Por hacer.
+
+# Se debe recuperar el status de los request al backend para poder identificar que tipo de alerta mostrar. idealmente
+en crear una funcion en /utils que valide cada status y retorne un binario de tipo "success"/"error" (esto es porque son varios status).
+  ## Enviar el result de esa funcion validadora al reducer y guardarla en un estado global segun el dispatch que se este ejecutando.
+  ## Recuperar el status en /login y /create y enviarla junto con el message al componente alerta, validar si la alerta es verde o roja
+  ## Agregar unos iconos a la alerta para que este mas coqueta.
+
+## Revisar cual es la mejor forma de redirigir al usuario a la home luego de crear/logear (por el momento Router.push('/'))
+## Ver que hacer con el access_token, deberia ir a LS.
+## Construir menu hamburguesa para mobile screens.
+## Mostrar condicionalmente botones segun este logeado o no el user (en el menu hamburguesa)
